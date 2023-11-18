@@ -1,14 +1,17 @@
-const  http = require('http');
+const http = require('http');
 
-const  server = http.createServer((req, res)=>{
-    if (req.url=== '/') {
-        res.end('Welcome to our home page')
+
+const server = http.createServer((req,res)=>{
+    if (req.url ==='/'){
+        return res.end('Home page')
     }
-    else if(req.url==='/about'){
-        res.end('Here is our short history')
+    if (req.url === '/about'){
+        return res.end('about page')
     }
-    else res.end('<h1>\'Oops!\'</h1>\n' +
-        '    <p>\'We can\'t seem to find the page your loocking for\'</p>\n' +
-        '    <a href="/">back home</a>')
+    return res.end('Error page')
+
 })
-server.listen(5000)
+
+server.listen(5000, ()=>{
+    console.log('server listening on port 5000')
+})
