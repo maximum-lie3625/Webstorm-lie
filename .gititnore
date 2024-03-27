@@ -1,1 +1,31 @@
-/node module
+# dependencies
+/node_modules
+
+# build artifacts
+/build
+/dist
+
+# development files
+/coverage
+/tmp
+/logs
+
+# environment files
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# editor files
+.vscode
+.idea
+
+# IDE files
+*.sublime-workspace
+*.project
+*.nwb
+
+# operating system files
+.DS_Store
+Thumbs.db
